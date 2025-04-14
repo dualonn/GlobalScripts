@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setup_page() {
-    document.body.appendChild(header);
+    document.body.prepend(header);
     let icon = document.createElement('img');
     icon.id = "dualonn-icon";
     icon.setAttribute('links-to', "Home");
