@@ -10,13 +10,7 @@ function setup_header() {
         element.innerHTML = `<p class='header_link_text'>${link}</p>`;
         element.setAttribute('links-to', `${link}`);
         element.onclick = function() {
-            if (typeof load_content === 'function') {
-                // If load_content is defined, call it for the main page
-                load_content.call(this);
-            } else {
-                // Otherwise, navigate to the main page with the correct query parameter
-                window.location.href = `https://dualonn.com?page=${link}`;
-            }
+            window.location.href = `https://dualonn.com?page=${link}`
         };
         header.appendChild(element);
     }
